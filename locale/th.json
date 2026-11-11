@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "แชทข้าง",
+    "description": "แชทในแถบขวาสำหรับถามว่า session ปัจจุบันกำลังทำอะไร จากเนื้อหาบทสนทนาของมันเอง"
+  },
+  "type.label": "แชทข้าง",
+  "guide.title": "แชทข้าง",
+  "guide.description": "ถามว่าบทสนทนานี้กำลังทำอะไร",
+  "placeholder": "ถามเกี่ยวกับบทสนทนานี้…",
+  "send": "ถาม",
+  "empty": "ถามได้ว่า session นี้คืออะไร กำลังทำอะไร หรือขั้นตอนไหนเสร็จแล้ว",
+  "thinking": "กำลังอ่านบทสนทนา…",
+  "needSession": "เปิด session ก่อน",
+  "noSession": "แท็บนี้ไม่มี session",
+  "noModel": "session นี้ยังไม่ได้เลือกโมเดล",
+  "unknownRoute": "โมเดลนี้ใช้งานไม่ได้แล้ว",
+  "failed": "ตอบไม่สำเร็จ: {message}",
+  "model.label": "ตอบด้วย",
+  "model.follow": "ใช้โมเดลเดียวกับ session นี้",
+  "model.via": "ตอบด้วย {model}"
+}

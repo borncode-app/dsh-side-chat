@@ -1,0 +1,12 @@
+# Inserts the side-chat Host row and serves /plugins/side-chat to the Web GUI.
+# Every key here must exist in the plugin's Config schema: an unknown key fails
+# the entry at boot.
+- insert:
+    - id: side-chat
+      name: '@local/dsh-side-chat'
+      config:
+        endpoint: /plugins/side-chat
+        provider: deepseek-account
+        model: deepseek-flash
+        maxChars: 48000
+        maxMessageChars: 4000

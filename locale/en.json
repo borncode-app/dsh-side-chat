@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "Side chat",
+    "description": "A right-sidebar chat that answers questions about the current session's conversation."
+  },
+  "type.label": "Side chat",
+  "guide.title": "Side chat",
+  "guide.description": "Ask what this conversation is doing",
+  "placeholder": "Ask about this conversation…",
+  "send": "Ask",
+  "empty": "Ask what this session is, what it is doing, or whether a step is finished.",
+  "thinking": "Reading the conversation…",
+  "needSession": "Open a session first",
+  "noSession": "This pane has no session.",
+  "noModel": "This session has not chosen a model yet.",
+  "unknownRoute": "That model is no longer available.",
+  "failed": "The answer failed: {message}",
+  "model.label": "Answer with",
+  "model.follow": "Same model as this session",
+  "model.via": "answered by {model}"
+}

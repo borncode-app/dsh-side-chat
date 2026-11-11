@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "侧边对话",
+    "description": "右侧边栏中的对话，可根据当前会话的内容回答“这是什么、在做什么”。"
+  },
+  "type.label": "侧边对话",
+  "guide.title": "侧边对话",
+  "guide.description": "询问这段对话在做什么",
+  "placeholder": "就这段对话提问…",
+  "send": "提问",
+  "empty": "可以询问这个会话是什么、正在做什么，或某一步是否完成。",
+  "thinking": "正在读取对话…",
+  "needSession": "请先打开一个会话",
+  "noSession": "此面板没有会话。",
+  "noModel": "该会话尚未选择模型。",
+  "unknownRoute": "该模型已不可用。",
+  "failed": "回答失败：{message}",
+  "model.label": "回答模型",
+  "model.follow": "与本会话使用相同模型",
+  "model.via": "由 {model} 回答"
+}
