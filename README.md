@@ -1,7 +1,29 @@
+> **This repository has moved into one monorepo.**
+>
+> The BornCode plugins — agent customization, desktop control, auto-continue,
+> auto-shutdown, browser use, session instructions, session sync, and the side
+> chat — now live in
+> **[`borncode-app/dsh-borncode`](https://github.com/borncode-app/dsh-borncode)**,
+> one repository with one Plugins entry.
+>
+> | this repo | new home |
+> |---|---|
+> | `dsh-agent-customizer` | `packages/dsh-agent-customizer` |
+> | `dsh-agent-desktop` | `packages/dsh-agent-desktop` |
+> | `dsh-auto-continue` | `packages/dsh-auto-continue` |
+> | `dsh-auto-shutdown` | `packages/dsh-auto-shutdown` |
+> | `dsh-browser-use` | `packages/dsh-browser-use` |
+> | `dsh-session-instructions` | `packages/dsh-session-instructions` |
+> | `dsh-session-sync` | `packages/dsh-session-sync` |
+> | `dsh-side-chat` | `packages/dsh-side-chat` |
+>
+> The code and its history are unchanged; only the repository is shared. Install
+> `dsh-borncode` instead of the individual bundles. This repository stays open
+> so the old links keep working.
 <div align="center">
   <img src="icon.svg" alt="" width="72" height="72">
   <h1>dsh-side-chat</h1>
-  <p><b>Ask about the conversation you are in — in a chat that never edits it.</b></p>
+  <p><b>Ask about the conversation you are in â€” in a chat that never edits it.</b></p>
   <p>
     <a href="https://github.com/borncode-app/dsh-side-chat/releases"><img alt="release" src="https://img.shields.io/github/v/release/borncode-app/dsh-side-chat?style=flat-square&color=6C4BF6"></a>
     <a href="LICENSE"><img alt="license" src="https://img.shields.io/badge/license-MIT-3DA639?style=flat-square"></a>
@@ -23,13 +45,13 @@ answers in the right sidebar, and writes nothing back into the main conversation
 
 ## Features
 
-- **The sidebar pane** — a separate chat that knows which session you are looking at, and says so when there is none.
-- **Context without side effects** — the main transcript is read (`maxChars`, 48 000 by default), never appended to.
-- **Its own model, or the session's** — "Same model as this session" by default; pick a cheaper route when you only
+- **The sidebar pane** â€” a separate chat that knows which session you are looking at, and says so when there is none.
+- **Context without side effects** â€” the main transcript is read (`maxChars`, 48 000 by default), never appended to.
+- **Its own model, or the session's** â€” "Same model as this session" by default; pick a cheaper route when you only
   need a summary. The pane tells you which model answered (`model.via`).
-- **Bounded input** — `maxMessageChars` stops a wall of text from becoming an expensive question.
-- **Honest about gaps** — no session, no model, or a retired route each get their own message instead of a crash.
-- **Localized UI** — English, Thai, and Chinese in `locale/`.
+- **Bounded input** â€” `maxMessageChars` stops a wall of text from becoming an expensive question.
+- **Honest about gaps** â€” no session, no model, or a retired route each get their own message instead of a crash.
+- **Localized UI** â€” English, Thai, and Chinese in `locale/`.
 
 ## Requirements
 
@@ -63,15 +85,15 @@ Restart once. The pane appears in the right sidebar with the current session alr
 | `maxChars` | `48000` | How much of the session transcript is sent as context |
 | `maxMessageChars` | `4000` | Longest question accepted |
 
-Every key here must exist in the plugin's `Config` schema — an unknown key fails the row at boot, on purpose.
+Every key here must exist in the plugin's `Config` schema â€” an unknown key fails the row at boot, on purpose.
 
 ## How it works
 
 ```
-session transcript ──(read, capped at maxChars)──▶
-                                                   side chat ──▶ answer in the sidebar
-your question ─────────────────────────────────────▶       ▲
-                                                           │
+session transcript â”€â”€(read, capped at maxChars)â”€â”€â–¶
+                                                   side chat â”€â”€â–¶ answer in the sidebar
+your question â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–¶       â–²
+                                                           â”‚
                                               nothing is written back
 ```
 
@@ -88,16 +110,16 @@ token count and its history stay exactly as they were.
 | `locale/{en,th,zh}.json` | UI strings |
 | `icon.svg` | plugin icon |
 
-## ภาษาไทย
+## à¸ à¸²à¸©à¸²à¹„à¸—à¸¢
 
-แชทด้านขวาไว้ **ถามเรื่องบทสนทนาที่กำลังทำอยู่** โดยไม่กระทบงานหลัก — ใช้ตอนอยากรู้ว่า "session นี้ทำอะไรอยู่",
-"ขั้นนั้นเสร็จหรือยัง", "แก้ไฟล์ไหนไปแล้ว" แทนที่จะไปเผาเทิร์นจริงของ agent หลัก
+à¹à¸Šà¸—à¸”à¹‰à¸²à¸™à¸‚à¸§à¸²à¹„à¸§à¹‰ **à¸–à¸²à¸¡à¹€à¸£à¸·à¹ˆà¸­à¸‡à¸šà¸—à¸ªà¸™à¸—à¸™à¸²à¸—à¸µà¹ˆà¸à¸³à¸¥à¸±à¸‡à¸—à¸³à¸­à¸¢à¸¹à¹ˆ** à¹‚à¸”à¸¢à¹„à¸¡à¹ˆà¸à¸£à¸°à¸—à¸šà¸‡à¸²à¸™à¸«à¸¥à¸±à¸ â€” à¹ƒà¸Šà¹‰à¸•à¸­à¸™à¸­à¸¢à¸²à¸à¸£à¸¹à¹‰à¸§à¹ˆà¸² "session à¸™à¸µà¹‰à¸—à¸³à¸­à¸°à¹„à¸£à¸­à¸¢à¸¹à¹ˆ",
+"à¸‚à¸±à¹‰à¸™à¸™à¸±à¹‰à¸™à¹€à¸ªà¸£à¹‡à¸ˆà¸«à¸£à¸·à¸­à¸¢à¸±à¸‡", "à¹à¸à¹‰à¹„à¸Ÿà¸¥à¹Œà¹„à¸«à¸™à¹„à¸›à¹à¸¥à¹‰à¸§" à¹à¸—à¸™à¸—à¸µà¹ˆà¸ˆà¸°à¹„à¸›à¹€à¸œà¸²à¹€à¸—à¸´à¸£à¹Œà¸™à¸ˆà¸£à¸´à¸‡à¸‚à¸­à¸‡ agent à¸«à¸¥à¸±à¸
 
-- อ่าน transcript ของ session ปัจจุบันเป็นบริบท (จำกัดที่ `maxChars` 48,000) แต่ **ไม่เขียนอะไรกลับ**
-- เลือกโมเดลได้: ใช้โมเดลเดียวกับ session (ค่าเริ่มต้น) หรือเลือกตัวที่ถูกกว่าเพื่อแค่สรุป
-- มีข้อความบอกชัดเมื่อยังไม่มี session / ยังไม่เลือกโมเดล / route นั้นถูกปลดไปแล้ว
-- จำกัดความยาวคำถามด้วย `maxMessageChars`
+- à¸­à¹ˆà¸²à¸™ transcript à¸‚à¸­à¸‡ session à¸›à¸±à¸ˆà¸ˆà¸¸à¸šà¸±à¸™à¹€à¸›à¹‡à¸™à¸šà¸£à¸´à¸šà¸— (à¸ˆà¸³à¸à¸±à¸”à¸—à¸µà¹ˆ `maxChars` 48,000) à¹à¸•à¹ˆ **à¹„à¸¡à¹ˆà¹€à¸‚à¸µà¸¢à¸™à¸­à¸°à¹„à¸£à¸à¸¥à¸±à¸š**
+- à¹€à¸¥à¸·à¸­à¸à¹‚à¸¡à¹€à¸”à¸¥à¹„à¸”à¹‰: à¹ƒà¸Šà¹‰à¹‚à¸¡à¹€à¸”à¸¥à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸š session (à¸„à¹ˆà¸²à¹€à¸£à¸´à¹ˆà¸¡à¸•à¹‰à¸™) à¸«à¸£à¸·à¸­à¹€à¸¥à¸·à¸­à¸à¸•à¸±à¸§à¸—à¸µà¹ˆà¸–à¸¹à¸à¸à¸§à¹ˆà¸²à¹€à¸žà¸·à¹ˆà¸­à¹à¸„à¹ˆà¸ªà¸£à¸¸à¸›
+- à¸¡à¸µà¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¸šà¸­à¸à¸Šà¸±à¸”à¹€à¸¡à¸·à¹ˆà¸­à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µ session / à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹€à¸¥à¸·à¸­à¸à¹‚à¸¡à¹€à¸”à¸¥ / route à¸™à¸±à¹‰à¸™à¸–à¸¹à¸à¸›à¸¥à¸”à¹„à¸›à¹à¸¥à¹‰à¸§
+- à¸ˆà¸³à¸à¸±à¸”à¸„à¸§à¸²à¸¡à¸¢à¸²à¸§à¸„à¸³à¸–à¸²à¸¡à¸”à¹‰à¸§à¸¢ `maxMessageChars`
 
 ## License
 
-[MIT](LICENSE) © 2026 BornCode
+[MIT](LICENSE) Â© 2026 BornCode
